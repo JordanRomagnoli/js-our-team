@@ -20,24 +20,16 @@ for(let i = 0; i < profileList.length; i++){
     for(let key in profileList[i]){
 
         console.log(key+': ', profileList[i][key]);
-        
     }
 
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+    document.querySelector('.row').innerHTML += `
+        <div class="col-6 text-center my-2 card p-2">
+            <h2>${profileList[i]['name']}</h2>
+            <h3>${profileList[i]['role']}</h3>
+            ${profileList[i]['immage']}
+        </div>
+        `
+};
 
 
 
